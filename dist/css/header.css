@@ -1,0 +1,132 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    .header {
+        background-color: #16779E;
+        padding: 5px;
+    }
+    .rowcontent {
+        display: flex;
+        justify-content: center;
+    }
+        /*******LOGO****************/
+        .rowcontent .logobx {
+            align-self: center;
+            width: 150px;
+            height: 50px;
+            margin: 0 15px;
+        }
+        .rowcontent .logobx img {
+            /* width: 100%; */
+            padding: 5px;
+            width: 150px;
+            height: 50px;
+        }
+        /*******TOGGLE*BAR***********/
+        .hamburger {
+        display: none;
+        margin: 2px 5px;
+        padding: 2px;
+        border: 1px solid #fff;
+        align-self: center;
+        cursor: pointer;
+    }
+    #bars {
+        color: #fff;
+        padding: 2px;
+    }
+    #nav {
+        background-color: #28016B;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
+    #nav ul {
+        list-style: none;
+        margin: 0;
+    }
+    #nav ul li {
+        display: inline-block;
+        padding: 5px;
+    }
+    #nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    /***********sidebar**************************/
+    .bg-sidebar {
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .sidebar-content {
+        z-index: 6;
+        width: 0px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        overflow-x: hidden;
+        overflow-y: auto;
+        direction: ltr;
+        transition: all 0.8s;
+    }
+    .sidebar-content li {
+        display: flex;
+        list-style: none;
+        margin-top: 0.50px;
+        padding: 5px 7px;
+    }
+    .sidebar-content li:hover {
+        background-color: #eeeeee;
+    }
+    .sidebar-content li span {
+        width: 25px;
+        height: 25px;
+        align-self: center;
+        align-items: center;
+        color: rgb(22, 119, 158);
+        padding: 5px;
+        font-size: 15px;
+        align-content: center;
+    }
+    .sidebar-content li a {
+        list-style: none;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(22, 119, 158);
+        padding: 11px 10px;
+        display: block;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        width: 100%;
+        align-self: center;
+        align-items: center;
+        align-content: center;
+    }
+    @media screen and (max-width: 992px) {
+        .rowcontent {
+            display: flex;
+            justify-content: space-between;
+        }
+        /*******TOGGLE*BAR***********/
+        .hamburger {
+            display: flex;
+        }
+        #nav {
+            display: none;
+        }
+    }

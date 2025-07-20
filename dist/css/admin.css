@@ -1,0 +1,1384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: #F1F4FFFF;
+    color: #858796;
+}
+/***********sidebar*scroller*************/
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* tdack */
+::-webkit-scrollbar-tdack {
+    background: rgb(206, 224, 224);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(122, 121, 121);
+  }
+/***********Nav*******************/
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    padding: 5px;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    position: fixed;
+}
+#bars{
+    margin: 10px 25px;
+    align-self: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    color:#2f2f31;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+#timess{
+    width: 30px;
+    height: 30px;
+    display: none;
+    margin: 10px 25px;
+    align-self: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    color:#2f2f31; 
+    cursor: pointer;
+    pointer-events: visible;
+}
+.logo-container{
+    margin: 5px 25px;
+    align-self: center;
+    width: 150px;
+    height: 50px;
+}
+.logo-container img{
+    /* background-color: #dc3545; */
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+}
+.visitorname{
+    margin: 0px 25px;
+    display: flex;
+    align-self: center;
+    font-family: sans-serif;
+}
+.visitorname ul{
+    align-self: center;
+    position: relative;
+}
+.visitorname ul li{
+    list-style:none;
+    padding: 5px;
+font-family: 'Montserrat', sans-serif;
+color: black;
+font-weight: 600;
+display: block;
+cursor: pointer;
+}
+.visitorname ul li i{
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+}
+.visitorname ul li ul{
+    width: 120px;
+    display: none;
+    justify-content: center;
+    background-color: rgb(8, 80, 90);
+    border-radius: 4px;
+    height: 0px;
+    position: absolute;
+    transition: all 0.5s;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+
+.visitorname ul li a{
+text-decoration: none;
+padding: 7px;
+cursor: pointer;
+align-self: center;
+font-family: 'Montserrat', sans-serif;
+color: #fff;
+width: inherit;
+height: inherit;
+margin-bottom: 15px;
+box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+.visitorname ul:hover ul{
+display: flex;
+height: 35px
+}
+
+#cogs #cogs-wheel{
+    color: rgb(11, 192, 162);
+    bottom: 3rem;
+    right: 50px;
+    position: fixed;
+    font-size: 30px;
+cursor:pointer;
+}
+
+/***********sidebar*scroller*************/
+/* width */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+    }
+    
+    /* tdack */
+    .sidebar::-webkit-scrollbar-tdack {
+    background:  rgb(4, 4, 34);
+    }
+    
+    /* Handle */
+    .sidebar::-webkit-scrollbar-thumb {
+    background:  rgb(4, 4, 34);
+    border-radius: 3px;
+    }
+    
+    /* Handle on hover */
+    .sidebar::-webkit-scrollbar-thumb:hover {
+    background:  rgb(4, 4, 34);
+    }
+    #bg-sidebar-admin{
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .sidebar {
+        width: 15rem;
+        user-select: none;
+        overflow-x: hidden;
+     overflow-y: auto;
+        font-family: 'Poppins',sans-serif;
+        left: 0;
+        bottom: 0;
+        top: 4.4rem;
+        position: fixed;
+        background-color: rgb(4, 4, 34);
+        transition: all 0.2s ;
+        z-index: 5;
+    }
+    .sidebar .text{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 65px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    .sidebar .text a{
+        text-decoration: none;
+        color: crimson;
+    }
+    .sidebar .mainul{
+        height: 100%;
+        width: 100%;
+    }
+    .sidebar .mainul li{
+        line-height: 60px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .sidebar .mainul li:last-child{
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .sidebar .mainul li #iconsli{
+        color: #fff;
+        padding-right: 10px;
+    }
+    .sidebar .mainul li  #iconsli.active{
+        color: cyan;
+        background-color: #1e1e1e;
+        border-left-color: cyan;
+    }
+    .sidebar .mainul li a{
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 500;
+        padding-left:20px;
+        display:block;
+        width: 100%;
+        border-left: 2px solid transparent;
+    }
+    .sidebar .mainul li.active a{
+        color: cyan;
+        background-color: #1e1e1e;
+        border-left-color: cyan;
+    }
+    .sidebar .mainul ul{
+        position: static;
+        display: none;
+        transition: 0.6s ease !important;
+    }
+    .sidebar ul .feat-show.show{
+        display: block;
+    }
+    .sidebar ul .serv-show.show1{
+        display: block;
+    }
+    .sidebar ul .three-show.show2{
+        display: block;
+    }
+    .sidebar ul .four-show.show3{
+        display: block;
+    }
+    .sidebar .mainul ul li{
+        line-height: 55px;
+        border-bottom: none;
+    }
+    .sidebar .mainul ul li a{
+        font-size: 17px;
+        color: #e6e6e6;
+        padding-left: 60px;
+        display: block;
+    }
+    .sidebar .mainul li.active ul li a{
+        color: #e6e6e6;
+        background-color: #1b1b1b;
+        border-left-color:transparent;
+    }
+    .sidebar .mainul ul li a:hover{
+        color: crimson!important;
+        background-color:#1e1e1e!important;
+        border-left-color: crimson!important;
+    }
+    .sidebar .mainul li a #chevron{
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 22px;
+        transition: all 0.4s ;
+    }
+    .sidebar .mainul li a #chevron.rotate{
+        transform: translateY(-50%) rotate(180deg);
+    }
+/****************uploads*****pic**************/
+#overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+    z-index: 100;
+}
+#content-upload{
+ display: none;
+ background-color: #fff;
+ justify-content: center;
+ flex-direction: column;
+ padding: 10px;
+ position: relative;
+}
+#content-upload #uclose{
+    position: absolute;
+    margin: 5px;
+    right: 14px;
+    top: 5px;
+    padding: 5px;
+    font-size: 1.2rem;
+    color:#2f2f31; 
+    cursor: pointer;
+}
+#content-upload h2{
+    margin: 10px;
+    padding: 5px;
+    color:rgb(5, 124, 98);
+    font-family:'Poppins',sans-serif;
+    text-align: center;
+}
+#content-upload #ufile{
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+#content-upload #ubtn{
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/***********mainbody**************/
+.okojo{
+    display: flex;
+    margin:5rem 1rem 4.4rem 15.5rem ;
+    /* border: 2px solid red; */
+    
+}
+.maincontaineradmin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 10px;
+    border-radius: 4px;
+    border: 2px solid green;
+}
+.lstjb{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.lstjb h1{
+text-align: center;
+margin: 10px;
+padding: 5px;
+font-family: 'Redressed', cursive;
+
+}
+.lstjb #ltstinput-heading{
+    margin: 10px;
+padding:0px 25px;
+height: 34px;
+outline: none;
+border-radius: 4px;
+border: 1px solid #e8efeb;
+background-color: #e8efeb;
+font-family: sans-serif;
+}
+.lstjb #ltstinput-link{
+margin: 10px;
+padding:0px 25px;
+height: 34px;
+outline: none;
+border-radius: 4px;
+border: 1px solid #e8efeb;
+background-color: #e8efeb;
+font-family: sans-serif;
+color: blue;
+}
+
+#button-one{
+    margin: 10px;
+    padding:0px 25px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #00917c;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#button-one:hover{
+    box-shadow: 1px 1px 10px 1px #000000;
+
+}
+/*****************************Dashboard**main**body***********************************************************************************************/
+.dashmainbody{
+display: flex;
+flex-direction: column;
+margin-top: 4.4rem;
+margin-left: 15rem;
+transition: all 0.5s;
+/* border: 2px solid red; */
+}
+.dks{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.dks .labellocate{
+    padding: 5px 15px;
+    display: flex;
+}
+.labellocate #labello-icon{
+    align-self: center;
+    font-size: 24px;
+    color: #009688;
+}
+.labellocate #df{
+    font-family: 'Poppins',sans-serif;
+    align-self: center;
+    font-size: 20px;
+}
+.labellocate h1{
+    color: #009688;
+    margin: 5px;
+    padding: 5px;
+    font-size: 23px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.dks .aduser{
+    display: flex;
+}
+
+.dks .aduser a{
+    margin-right: 15px;
+    padding: 10px;
+    align-self: center;
+    background-color: #fff;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+text-decoration: none;
+color: #0392cf;
+font-family: 'Poppins',sans-serif;
+font-weight: 900;
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dks .aduser a span{
+    padding: 5px;
+    font-weight: 900;
+}
+.cards-container{
+    display: flex;
+    margin: 10px;
+}
+.cards-container .visitorcount_1,
+.cards-container .visitorcount_2,
+.cards-container .visitorcount_3,
+.cards-container .visitorcount{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    background-color: #fff;
+    width: 250px;
+    border-radius: 4px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+.visitorcount_1  .cardvisit_1,
+.visitorcount_2  .cardvisit_2,
+.visitorcount_3 .cardvisit_3,
+.visitorcount .cardvisit{
+    display: flex;
+    justify-content: space-between;
+}
+.visitorcount_1  .cardvisit_1 h6,
+.visitorcount_2  .cardvisit_2 h6,
+.visitorcount_3  .cardvisit_3 h6,
+.visitorcount .cardvisit h6{
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 7px;
+}
+.visitorcount_3  .cardvisit_3 #crdicon_3{
+    display: flex;
+    justify-content: center;
+    margin: 11px;
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+}
+.visitorcount_2  .cardvisit_2 #crdicon_2{
+    display: flex;
+    justify-content: center;
+    margin: 11px;
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+}
+.visitorcount_1  .cardvisit_1 #crdicon_1{
+    display: flex;
+    justify-content: center;
+    margin: 11px;
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+    background: #642B73;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+}
+.visitorcount .cardvisit  #crdicon{
+    display: flex;
+    justify-content: center;
+    margin: 11px;
+    padding: 5px;
+    align-self: center;
+    align-items: center;
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+}
+.visitorcount_1  .valentery_1,
+.visitorcount_2  .valentery_2,
+.visitorcount_3  .valentery_3,
+.visitorcount .valentery{
+    margin: 0 8px;
+    padding: 0;
+display: flex;
+justify-content: space-between;
+}
+.visitorcount_1  .valentery_1  #count_1,
+.visitorcount_2  .valentery_2  #count_2,
+.visitorcount_3  .valentery_3  #count_3,
+.visitorcount .valentery #visit_count{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: green;
+    font-weight: 600;
+    font-size: 13px;
+}
+.visitorcount_1 .valentery_1 h6,
+.visitorcount_2 .valentery_2 h6,
+.visitorcount_3 .valentery_3 h6,
+.visitorcount .valentery h6{
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0px;
+    color: green;
+    font-family: 'Montserrat', sans-serif;
+}
+/******graphcontainers****/
+.graphcontainers{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+.graphcontainers .graphbox{
+    height: 400px;
+    width: 500px;
+    border-radius: 4px;
+    background-color: rgb(29, 38, 54);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(220, 220, 224, rgb(13, 247, 247));
+}
+/*******************************userboard_container****************************************************/
+.userboard_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.4rem;
+    margin-left: 15rem;
+    transition: all 0.5s;
+    }
+    .dks{
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .dks .labellocate{
+        padding: 5px 15px;
+        display: flex;
+    }
+    .labellocate #labello-icon{
+        align-self: center;
+        font-size: 24px;
+        color: #009688;
+    }
+    .labellocate #df{
+        font-family: 'Poppins',sans-serif;
+        align-self: center;
+        font-size: 20px;
+    }
+    .labellocate h1{
+        color: #009688;
+        margin: 5px;
+        padding: 5px;
+        font-size: 23px;
+        font-family: 'Poppins',sans-serif;
+    }
+    .dks .aduser{
+        display: flex;
+    }
+    .dks .aduser a{
+        margin-right: 15px;
+        padding: 10px;
+        align-self: center;
+        background-color: #fff;
+        box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    text-decoration: none;
+    color: #0392cf;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 900;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .dks .aduser a span{
+        padding: 5px;
+        font-weight: 900;
+    }
+/*************************************tables***************************************/
+    .usersboard{
+        background-color: #fff;
+        display: flex;
+        margin: 10px;
+        border-radius: 4px;
+        box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+        transition: all 0.5s;
+    }
+    .usersboard table{
+        width: 100%;
+        margin: 2px;
+        border-radius: 4px;
+        padding: 10px;
+        border-collapse: collapse;
+    }
+    .usersboard table .thone{
+        width:80px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .thtwo{
+        width:150px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .ththree{
+        width:150px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .thfour{
+        width:150px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .thfive{
+        width:50px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .thsix{
+        width:50px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .usersboard table .thseven{
+        width:50px;
+        padding: 5px;
+        text-align: center;
+        background-color: #214151;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    /*******td***********/
+    .usersboard table tr .tdone{
+        width:80px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid#e2e2e4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdtwo{
+        width:150px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid #e2e2e4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdthree{
+        width:150px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid #e2e2e4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdfour{
+        width:150px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid #e2e2e4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdfive{
+        width:50px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid #e2e2e4;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdsix{
+        width:50px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        border-right:2px solid #e2e2e4;
+        font-weight: 600;
+    }
+    .usersboard table tr .tdseven{
+        width:50px;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    #useredit{
+        color: rgb(255, 0, 98);
+    }
+    #userdel{
+        color:#045762;
+    }
+    .usersboard table tr:nth-child(even) {background: #a3d2ca}
+    .usersboard table tr:nth-child(odd) {background: #bbf1fa}
+/*****************************media**queries******************************************************/
+@media screen and (min-width:992px){
+    #bars{
+        margin: 10px 25px;
+        align-self: center;
+        padding: 5px;
+        font-size: 1.2rem;
+        color:#2f2f31;
+        cursor: pointer;
+        pointer-events: none;
+    }
+    #timess{
+        display: none;
+        margin: 10px 25px;
+        align-self: center;
+        padding: 5px;
+        font-size: 1.2rem;
+        color:#2f2f31; 
+        cursor: pointer;
+        pointer-events: none;
+    }
+}
+@media screen and (max-width:991px){
+    #bars{
+        pointer-events: visible;
+        cursor: pointer;
+    }
+      /*****Sidebar*****/
+.sidebar{
+    width: 0rem;
+    }
+/***********mainbody**************/
+.okojo{
+    display: flex;
+    margin:5rem 1rem 4.4rem 5rem ;
+}
+.maincontaineradmin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 10px;
+    border-radius: 4px;
+}
+/******Dashboard**main**body*********/
+.dashmainbody{
+    margin:5px;
+    margin-top: 4.4rem;
+    }
+
+    .dks{
+        margin: 10px;
+    }
+    .dks .labellocate{
+        padding: 5px 15px;
+    }
+    .labellocate #labello-icon{
+        font-size: 24px;
+    }
+    .labellocate #df{
+        font-size: 20px;
+    }
+    .labellocate h1{
+        margin: 5px;
+        padding: 5px;
+        font-size: 23px;
+    }
+    .dks .aduser a{
+        margin-right: 15px;
+        padding: 10px;
+    font-weight: 900;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    }
+    .dks .aduser a span{
+        padding: 5px;
+        font-weight: 900;
+    }
+    .cards-container{
+        margin: 10px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .cards-container .visitorcount_1,
+.cards-container .visitorcount_2,
+.cards-container .visitorcount_3,
+    .cards-container .visitorcount{
+        margin: 10px;
+        padding: 5px;
+        width: 250px;
+    }
+    .visitorcount_1  .cardvisit_1,
+.visitorcount_2  .cardvisit_2,
+.visitorcount_3 .cardvisit_3,
+    .visitorcount .cardvisit{
+        display: flex;
+        justify-content: space-between;
+    }
+    .visitorcount_1  .cardvisit_1 h6,
+.visitorcount_2  .cardvisit_2 h6,
+.visitorcount_3  .cardvisit_3 h6,
+    .visitorcount .cardvisit h6{
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .visitorcount_3  .cardvisit_3 #crdicon_3{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_2  .cardvisit_2 #crdicon_2{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .cardvisit_1 #crdicon_1{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount .cardvisit  #crdicon{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .valentery_1,
+.visitorcount_2  .valentery_2,
+.visitorcount_3  .valentery_3,
+    .visitorcount .valentery{
+        margin: 0 8px;
+        padding: 0;
+    }
+    .visitorcount_1  .valentery_1  #count_1,
+.visitorcount_2  .valentery_2  #count_2,
+.visitorcount_3  .valentery_3  #count_3,
+    .visitorcount .valentery #visit_count{
+        margin: 0px;
+        font-size: 11px;
+    }
+    .visitorcount_1 .valentery_1 h6,
+.visitorcount_2 .valentery_2 h6,
+.visitorcount_3 .valentery_3 h6,
+    .visitorcount .valentery h6{
+        font-weight: 600;
+        font-size: 11px;
+        margin: 0px;
+    }
+    /******userboard_container**********/
+    .userboard_container{
+        margin-top: 4.4rem;
+        margin-left: 0rem;
+        transition: all 0.5s;
+        }
+}
+@media screen and (max-width:786px){
+    #bars{
+        cursor: pointer;
+    }
+      /*****Sidebar*****/
+.sidebar{
+    width: 0rem;
+    }
+/***********mainbody**************/
+.okojo{
+    display: flex;
+    margin:5rem 0rem 4.4rem 0rem ;
+}
+.maincontaineradmin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 10px;
+    border-radius: 4px;
+}
+/******Dashboard**main**body*********/
+.dashmainbody{
+    margin:5px;
+    margin-top: 4.4rem;
+    }
+
+    .dks{
+        border: 1px solid orange;
+        margin: 10px;
+    }
+    .dks .labellocate{
+        padding: 5px 15px;
+    }
+    .labellocate #labello-icon{
+        font-size: 18px;
+    }
+    .labellocate #df{
+        font-size: 15px;
+    }
+    .labellocate h1{
+        margin: 5px;
+        padding: 5px;
+        font-size: 18px;
+    }
+    .dks .aduser a{
+        margin-right: 15px;
+        padding: 10px;
+    font-weight: 900;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 12px;
+    }
+    .dks .aduser a span{
+        padding: 5px;
+        font-weight: 900;
+    }
+    .cards-container{
+        margin: 10px;
+    }
+    .cards-container .visitorcount_1,
+.cards-container .visitorcount_2,
+.cards-container .visitorcount_3,
+    .cards-container .visitorcount{
+        margin: 10px;
+        padding: 5px;
+        width: 250px;
+    }
+    .visitorcount_1  .cardvisit_1,
+.visitorcount_2  .cardvisit_2,
+.visitorcount_3 .cardvisit_3,
+    .visitorcount .cardvisit{
+        display: flex;
+        justify-content: space-between;
+    }
+    .visitorcount_1  .cardvisit_1 h6,
+.visitorcount_2  .cardvisit_2 h6,
+.visitorcount_3  .cardvisit_3 h6,
+    .visitorcount .cardvisit h6{
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .visitorcount_3  .cardvisit_3 #crdicon_3{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_2  .cardvisit_2 #crdicon_2{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .cardvisit_1 #crdicon_1{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount .cardvisit  #crdicon{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .valentery_1,
+    .visitorcount_2  .valentery_2,
+    .visitorcount_3  .valentery_3,
+    .visitorcount .valentery{
+        margin: 0 8px;
+        padding: 0;
+    }
+    .visitorcount_1  .valentery_1  #count_1,
+.visitorcount_2  .valentery_2  #count_2,
+.visitorcount_3  .valentery_3  #count_3,
+    .visitorcount .valentery #visit_count{
+        margin: 0px;
+        font-size: 11px;
+    }
+    .visitorcount_1 .valentery_1 h6,
+.visitorcount_2 .valentery_2 h6,
+.visitorcount_3 .valentery_3 h6,
+    .visitorcount .valentery h6{
+        font-weight: 600;
+        font-size: 11px;
+        margin: 0px;
+    }
+}
+@media screen and (max-width:486px){
+    #bars{
+        cursor: pointer;
+    }
+      /*****Sidebar*****/
+.sidebar{
+    width: 0rem;
+    }
+/***********mainbody**************/
+.okojo{
+    display: flex;
+    margin:5rem 0rem 4.4rem 0rem ;
+}
+.maincontaineradmin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 10px;
+    border-radius: 4px;
+}
+/******Dashboard**main**body*********/
+.dashmainbody{
+    margin:5px;
+    margin-top: 4.4rem;
+    }
+
+    .dks{
+        border: 1px solid rgb(17, 0, 255);
+        margin: 10px;
+    }
+    .dks .labellocate{
+        padding: 5px 15px;
+    }
+    .labellocate #labello-icon{
+        font-size: 10px;
+    }
+    .labellocate #df{
+        font-size: 10px;
+    }
+    .labellocate h1{
+        margin: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+    .dks .aduser a{
+        margin-right: 15px;
+        padding: 10px;
+    font-weight: 900;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 8px;
+    }
+    .dks .aduser a span{
+        padding: 5px;
+        font-weight: 900;
+    }
+    .cards-container{
+        margin: 10px;
+    }
+    .cards-container .visitorcount_1,
+.cards-container .visitorcount_2,
+.cards-container .visitorcount_3,
+    .cards-container .visitorcount{
+        margin: 10px;
+        padding: 5px;
+        width: 250px;
+    }
+    .visitorcount_1  .cardvisit_1,
+.visitorcount_2  .cardvisit_2,
+.visitorcount_3 .cardvisit_3,
+    .visitorcount .cardvisit{
+        display: flex;
+        justify-content: space-between;
+    }
+    .visitorcount_1  .cardvisit_1 h6,
+.visitorcount_2  .cardvisit_2 h6,
+.visitorcount_3  .cardvisit_3 h6,
+    .visitorcount .cardvisit h6{
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .visitorcount_3  .cardvisit_3 #crdicon_3{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_2  .cardvisit_2 #crdicon_2{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .cardvisit_1 #crdicon_1{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount .cardvisit  #crdicon{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .valentery_1,
+    .visitorcount_2  .valentery_2,
+    .visitorcount_3  .valentery_3,
+    .visitorcount .valentery{
+        margin: 0 8px;
+        padding: 0;
+    }
+    .visitorcount_1  .valentery_1  #count_1,
+.visitorcount_2  .valentery_2  #count_2,
+.visitorcount_3  .valentery_3  #count_3,
+    .visitorcount .valentery #visit_count{
+        margin: 0px;
+        font-size: 11px;
+    }
+    .visitorcount_1 .valentery_1 h6,
+.visitorcount_2 .valentery_2 h6,
+.visitorcount_3 .valentery_3 h6,
+    .visitorcount .valentery h6{
+        font-weight: 600;
+        font-size: 11px;
+        margin: 0px;
+    }
+}
+@media screen and (max-width:320px){
+    #bars{
+        cursor: pointer;
+    }
+      /*****Sidebar*****/
+.sidebar{
+    width: 0rem;
+    }
+/***********mainbody**************/
+.okojo{
+    display: flex;
+    margin:5rem 1rem 4.4rem 0rem ;
+}
+.maincontaineradmin{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin: 10px;
+    border-radius: 4px;
+}
+/******Dashboard**main**body*********/
+.dashmainbody{
+    margin:5px;
+    margin-top: 4.4rem;
+    }
+
+    .dks{
+        border: 1px solid rgb(234, 0, 255);
+        margin: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .dks .labellocate{
+        padding: 5px 15px;
+    }
+    .labellocate #labello-icon{
+        font-size: 11px;
+    }
+    .labellocate #df{
+        font-size: 11px;
+    }
+    .labellocate h1{
+        margin: 5px;
+        padding: 5px;
+        font-size: 11px;
+    }
+    .dks .aduser a{
+        margin-right: 15px;
+        padding: 10px;
+    font-weight: 900;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:7px;
+    }
+    .dks .aduser a span{
+        padding: 5px;
+        font-weight: 900;
+    }
+    .cards-container{
+        margin: 10px;
+    }
+    .cards-container .visitorcount_1,
+.cards-container .visitorcount_2,
+.cards-container .visitorcount_3,
+    .cards-container .visitorcount{
+        margin: 10px;
+        padding: 5px;
+        width: 250px;
+    }
+    .visitorcount_1  .cardvisit_1,
+.visitorcount_2  .cardvisit_2,
+.visitorcount_3 .cardvisit_3,
+    .visitorcount .cardvisit{
+        display: flex;
+        justify-content: space-between;
+    }
+    .visitorcount_1  .cardvisit_1 h6,
+.visitorcount_2  .cardvisit_2 h6,
+.visitorcount_3  .cardvisit_3 h6,
+    .visitorcount .cardvisit h6{
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .visitorcount_3  .cardvisit_3 #crdicon_3{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_2  .cardvisit_2 #crdicon_2{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .cardvisit_1 #crdicon_1{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount .cardvisit  #crdicon{
+        margin: 11px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .visitorcount_1  .valentery_1,
+    .visitorcount_2  .valentery_2,
+    .visitorcount_3  .valentery_3,
+    .visitorcount .valentery{
+        margin: 0 8px;
+        padding: 0;
+    }
+    .visitorcount_1  .valentery_1  #count_1,
+.visitorcount_2  .valentery_2  #count_2,
+.visitorcount_3  .valentery_3  #count_3,
+    .visitorcount .valentery #visit_count{
+        margin: 0px;
+        font-size: 11px;
+    }
+    .visitorcount_1 .valentery_1 h6,
+.visitorcount_2 .valentery_2 h6,
+.visitorcount_3 .valentery_3 h6,
+    .visitorcount .valentery h6{
+        font-weight: 600;
+        font-size: 11px;
+        margin: 0px;
+    }
+}
+

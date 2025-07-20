@@ -1,0 +1,190 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+#301
+#RewriteCond %{HTTP_HOST} ^www\.sarkarijoboffer\.in$
+#RewriteRule ^/?$ "https\:\/\/sarkarijoboffer\.in\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^sarkarijoboffer\.in$ [NC]
+RewriteRule ^(.*)$ https://www.sarkarijoboffer.in/$1 [L,R=301]
+#POST FILENAME CHANGE SEO FRIENDLY
+RewriteRule ^newjob/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/latsetjobvcan.php?id=$1&title=$2 [NC,L]
+RewriteRule ^admitcard/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/admitcd.php?id=$1&title=$2 [NC,L]
+RewriteRule ^result/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/resltp.php?id=$1&title=$2 [NC,L]
+RewriteRule ^admission/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/admissionp.php?id=$1&title=$2 [NC,L]
+RewriteRule ^other/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/schalarshipp.php?id=$1&title=$2 [NC,L]
+RewriteRule ^sylabus/([0-9]+)/([0-9a-zA-Z_-]+) navpage/detailpage/sylbp.php?id=$1&title=$2 [NC,L]
+#Changed Filename Sitemap
+RewriteRule ^sitemap.xml/?$ sitemap.php [L]
+#Changed File path
+RewriteRule ^about$ /navpage/about
+RewriteRule ^privacy$ /navpage/privacy
+RewriteRule ^terms$ /navpage/terms
+RewriteRule ^contact$ /navpage/contact
+RewriteRule ^disclaimer$ /navpage/disclaimer
+RewriteRule ^latestjob$ /navpage/latestjb
+RewriteRule ^syllabus$ /navpage/sylabuspage
+RewriteRule ^admitcards$ /navpage/admitcrd
+RewriteRule ^results$ /navpage/result
+RewriteRule ^admissions$ /navpage/admission
+RewriteRule ^careerguide$ /navpage/careerguide
+RewriteRule ^others$ /navpage/scholarship
+
+#2021
+RewriteRule ^2021/bseb10th$ /navpage/2021/bseb10th
+RewriteRule ^2021/JE$ /navpage/2021/JE
+RewriteRule ^2021/bseb10th$ /navpage/2021/bseb10th
+RewriteRule ^2021/upboard$ /navpage/2021/upboard
+RewriteRule ^2021/bpsc-aao$ /navpage/2021/bpsc-aao
+RewriteRule ^mp-board-result-2021-class-10$ /navpage/2021/mpbseresult
+RewriteRule ^mdo-answerkey-download$ /navpage/2021/mdo-answerkey-download
+RewriteRule ^link-not-activated$ /navpage/detailpage/file1
+RewriteRule ^link-is-not-activated$ /navpage/detailpage/file4
+RewriteRule ^10th-ssc-result-2021-maharashtra-board$ /navpage/2021/maharashtraboard
+RewriteRule ^ssc-gd-constable-notification$ /navpage/2021/sscgd.php
+RewriteRule ^nabard-notification$ /navpage/2021/nabard.php
+#PDF RENAME
+RewriteRule ^GD-Constable-vacancy-detail.pdf$ /Doc/GD-Constable-vacancy-detail.pdf
+RewriteRule ^cbse-12th-result-2021$ /navpage/2021/cbse-12th-result.php
+RewriteRule ^cbse-10th-result-2021$ /navpage/2021/cbse-10th-result.php
+#MISCELENIOUS
+RewriteRule ^en/(.*) /navpage/en/$1
+# RewriteRule ^visitor_data$ /adminpage/data/visitor_data
+# RewriteRule ^track$ /adminpage/adminsubpages/track
+#CHANGED ADMIN PATH FILE
+RewriteRule ^dashboard$ /adminpage/adminsubpages/admindashboard
+RewriteRule ^infoadmit$ /adminpage/adminsubpages/infoadmit
+RewriteRule ^infodetail$ /adminpage/adminsubpages/infodetail
+RewriteRule ^infoscholar$ /adminpage/adminsubpages/infoscholar
+RewriteRule ^infosylb$ /adminpage/adminsubpages/infosylb
+RewriteRule ^infoadmission$ /adminpage/adminsubpages/infoadmission
+RewriteRule ^sylabus$ /adminpage/adminsubpages/sylabuspage
+RewriteRule ^inforslt$ /adminpage/adminsubpages/inforslt
+RewriteRule ^adduser$ /adminpage/adminsubpages/adduser
+RewriteRule ^newsletter$ /adminpage/adminsubpages/newsletter
+RewriteRule ^adminhome$ /adminpage/adminsubpages/adminhome
+#ADMIN PANEL MISCELENIOUS
+# RewriteRule ^user/verify/([^/]*)/(.*)/?$ user.php?email=$1&token=$2 [L,NC]
+#RewriteRule ^verification/([0-9]+)/([0-9a-zA-Z_-]+) adminPanel/verification.php?id=$1 [NC,L]
+#DON'T GIVE THESE FILE ACCESS
+<files  adminhead.php>
+order allow,deny
+deny from all
+</files>
+<files   analytic.php>
+order allow,deny
+deny from all
+</files>
+
+<files  disclaim.php>
+order allow,deny
+deny from all
+</files>
+
+<files  footer.php>
+order allow,deny
+deny from all
+</files>
+
+<files  navheader.php>
+order allow,deny
+deny from all
+</files>
+
+<files   subhead.php>
+order allow,deny
+deny from all
+</files>
+
+<files track.php>
+order allow,deny
+deny from all
+</files>
+
+# <files admitcrdfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files download.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files function.php>
+# order allow,deny
+# deny from all
+# </files>
+
+
+# <files home_dreamjbfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files implinkfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files infodetailfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files newsfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files rslt_homefunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files sategvjob_function.php>
+# order allow,deny
+# deny from all
+# </files>
+
+# <files scholarshipfunction.php>
+# order allow,deny
+# deny from all
+# </files>
+
+
+##################################
+#<files config.php>
+#order allow,deny
+#deny from all
+#</files>
+
+#<files userconfig.php>
+#order allow,deny
+#deny from all
+#</files>
+
+
+#Options All -Indexes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:2Tv2JjXE5m
+#ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 2Tv2JjXE5m:ERRORPAGEID
+
